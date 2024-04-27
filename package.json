@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-project",
+  "version": "1.0.0",
+  "description": "A simple Node.js app serving a slider with images.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Anouar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calc</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="container-inputs">
+            <div class="container-input">
+                <div class="input-label">DAY</div>
+                <input type="text" id="input-day">
+            </div>
+            <div class="container-input">
+                <div class="input-label">MONTH</div>
+                <input type="text" id="input-month">
+            </div>
+            <div class="container-input">
+                <div class="input-label">YEAR</div>
+                <input type="text" id="input-year">
+            </div>
+        </div>
+
+        <div class="container-line">
+            <div class="line"></div>
+            <button class="btn-convert">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="25" viewBox="0 0 256 256" xml:space="preserve">
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 90 24.25 c 0 -0.896 -0.342 -1.792 -1.025 -2.475 c -1.366 -1.367 -3.583 -1.367 -4.949 0 L 45 60.8 L 5.975 21.775 c -1.367 -1.367 -3.583 -1.367 -4.95 0 c -1.366 1.367 -1.366 3.583 0 4.95 l 41.5 41.5 c 1.366 1.367 3.583 1.367 4.949 0 l 41.5 -41.5 C 89.658 26.042 90 25.146 90 24.25 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    </g>
+                </svg>
+            </button>
+        </div>
+
+        <div class="container-results">
+            <div class="container-result">
+                <div class="result-num" id="year">20</div>
+                <div class="result-text">years</div>
+            </div>
+            <div class="container-result">
+                <div class="result-num" id="month">3</div>
+                <div class="result-text">months</div>
+            </div>
+            <div class="container-result">
+                <div class="result-num" id="day">26</div>
+                <div class="result-text">days</div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Poppins:ital,wght@0,400;0,600;1,600&family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeea;
+}
+
+.container {
+    width: 840px;
+    height: 651px;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    background-color: #eeeeea;
+    border-radius: 24px;
+    border-bottom-right-radius: 144px;
+}
+
+.container-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.container-input input {
+    width: 160px;
+    height: 72px;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 8px;
+    border: 1px solid #eeeeea;
+    padding: 12px;
+    outline: none;
+}
+
+.container-line {
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.btn-convert {
+    width: 64px;
+    height: 64px;
+    color: white;
+    background-color: #000000;
+    border: none;
+    border-radius: 50%;
+}
+
+.btn-convert img {
+    width: 36px;
+    height: 36px;
+    margin-top: 8px;
+}
+
+.btn-convert:hover {
+    cursor: pointer;
+    background-color: r#ff0000;
+    transition: .3s ease-in;
+}
+
+.container-results {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.container-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 110px;
+}
+
+.result-num {
+    font-size: 110px;
+}
+
+.result-text {
+    font-size: 110px;
+}
+    </style>
+        <script src= "../agecalc/script.js"></script>
+
+</body>
+</html>
